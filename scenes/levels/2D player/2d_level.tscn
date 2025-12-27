@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://siayiecoccuu"]
+[gd_scene load_steps=5 format=3 uid="uid://ccyfkkjewjdi2"]
 
-[ext_resource type="PackedScene" uid="uid://4iekibd2v6ru" path="res://scenes/2d player/2d_controller.tscn" id="1_sfc20"]
+[ext_resource type="PackedScene" uid="uid://dbslmysi0v4qu" path="res://scenes/levels/2D player/2d_controller.tscn" id="1_7t1au"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sfc20"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -42,5 +42,5 @@ size = Vector3(1, 1.6, 1)
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3, 4.9)
 
-[node name="2d_controller" parent="." instance=ExtResource("1_sfc20")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.1000004, 0.6, 0.3)
+[node name="2dController" parent="." instance=ExtResource("1_7t1au")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.2000003, 0.4, 0)

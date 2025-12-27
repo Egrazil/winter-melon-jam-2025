@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnic032x7s53v"]
+[gd_scene load_steps=5 format=3 uid="uid://b181brnspgtsy"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_bh8e8"]
 
