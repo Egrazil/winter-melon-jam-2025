@@ -29,6 +29,8 @@ mesh = SubResource("BoxMesh_jsccy")
 script = ExtResource("1_ui0td")
 
 [node name="check-in-light" type="RayCast3D" parent="observer-test"]
+visibility_parent = NodePath("..")
+target_position = Vector3(20, 0, 0)
 script = ExtResource("2_4ta34")
 
 [node name="Camera3D" type="Camera3D" parent="."]
@@ -42,5 +44,3 @@ shape = SubResource("BoxShape3D_ui0td")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 mesh = SubResource("BoxMesh_4ta34")
-
-[connection signal="visibility_changed" from="observer-test/check-in-light" to="observer-test" method="_on_checkinlight_visibility_changed"]

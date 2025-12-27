@@ -10,7 +10,3 @@ func _process(delta: float) -> void:
 		position.x -= 1 * delta
 	print($"check-in-light".is_colliding())
 	#print(check_in_light.target_position)
-
-func _on_checkinlight_visibility_changed() -> void:
-	if (not $"check-in-light".is_colliding()):
-		print("notColliding")
