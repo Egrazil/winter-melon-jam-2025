@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://dt5rh2rtck2p5"]
+
+[ext_resource type="Script" uid="uid://1ra6wlorf5c4" path="res://scenes/levels/light-test/observer_test.gd" id="1_ui0td"]
+[ext_resource type="Script" uid="uid://bniip166ikfqu" path="res://scenes/levels/light-test/check_in_light.gd" id="2_4ta34"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_jsccy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ui0td"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4ta34"]
+
+[node name="LightTest" type="Node3D"]
+
+[node name="ground" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2574588, -0.6441587, -2.165924)
+size = Vector3(9.688721, 0.16125488, 9.79303)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.13880688, -0.53223795)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33747, -0.10483962, -1.3889045)
+visible = false
+size = Vector3(4.064453, 1, 0.28112793)
+
+[node name="observer-test" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7392523, 0, -3.6355193)
+mesh = SubResource("BoxMesh_jsccy")
+script = ExtResource("1_ui0td")
+
+[node name="check-in-light" type="RayCast3D" parent="observer-test"]
+script = ExtResource("2_4ta34")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.038255725, 0.24265003, -0.9693593, 0.009568725, 0.9701139, 0.2424613, 0.99922216, 0, -0.03943426, -4.7128716, 1.2319869, -2.190273)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.7500738)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_ui0td")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_4ta34")
+
+[connection signal="visibility_changed" from="observer-test/check-in-light" to="observer-test" method="_on_checkinlight_visibility_changed"]
