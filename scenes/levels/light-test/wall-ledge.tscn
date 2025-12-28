@@ -1,9 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2mbiloi8dv13"]
+[gd_scene load_steps=5 format=3 uid="uid://b2mbiloi8dv13"]
 
 [ext_resource type="PackedScene" uid="uid://csdt58rmxecpl" path="res://scenes/levels/light-test/light-detector.tscn" id="1_8jmvf"]
 [ext_resource type="Script" uid="uid://x50yiopaw7ua" path="res://scenes/levels/light-test/wall_ledge.gd" id="1_yofn3"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_yofn3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yofn3"]
 
 [node name="wall-ledge" type="MeshInstance3D"]
 script = ExtResource("1_yofn3")
@@ -11,6 +13,12 @@ script = ExtResource("1_yofn3")
 [node name="mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 mesh = SubResource("BoxMesh_yofn3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+shape = SubResource("BoxShape3D_yofn3")
 
 [node name="light-detector" parent="." instance=ExtResource("1_8jmvf")]
 target_position = Vector3(0.1, 0, 0)

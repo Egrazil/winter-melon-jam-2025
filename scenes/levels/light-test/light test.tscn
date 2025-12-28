@@ -14,7 +14,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2574588, -0.6441587, -2.16
 size = Vector3(9.688721, 0.16125488, 9.79303)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.13880688, -0.53223795)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8999999, -0.038806796, -0.13223791)
 script = ExtResource("1_4ta34")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
@@ -32,8 +32,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.7500738)
 shape = SubResource("BoxShape3D_ui0td")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0.100000024, 0)
 mesh = SubResource("BoxMesh_4ta34")
 
 [node name="GridTiles" parent="." node_paths=PackedStringArray("light") instance=ExtResource("3_4ta34")]
-transform = Transform3D(-0.9996152, 0, -0.027729588, 0, 1, 0, 0.027729588, 0, -0.9996152, -1.2569157, 0, -4.134855)
+transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, -3.7009444, 0, -4.134855)
+light = NodePath("../OmniLight3D")
+
+[node name="GridTiles2" parent="." node_paths=PackedStringArray("light") instance=ExtResource("3_4ta34")]
+transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, -1.2072797, 0, -4.134855)
+light = NodePath("../OmniLight3D")
+
+[node name="GridTiles3" parent="." node_paths=PackedStringArray("light") instance=ExtResource("3_4ta34")]
+transform = Transform3D(-5.36422e-07, 0, -5, 0, 5, 0, 5, 0, -5.36422e-07, 1.3000001, 0, -4.1)
+skeleton = NodePath("../GridTiles2")
 light = NodePath("../OmniLight3D")

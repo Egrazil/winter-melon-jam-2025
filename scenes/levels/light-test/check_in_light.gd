@@ -22,7 +22,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	#print(target_position)
 	if (light):
-		target_position = light.position - self.global_position
+		var t_pos = light.global_position - self.global_position
+		target_position = t_pos.rotated( Vector3(0,1,0), -global_rotation.y)
+		
 	if (!wasInLight && !is_colliding()):
 		wasInLight = true
 		enter_light.emit()
