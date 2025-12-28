@@ -5,10 +5,12 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_yofn3"]
 
-[node name="wall-ledge" type="MeshInstance3D"]
+[node name="wall-ledge" type="Node3D"]
+script = ExtResource("1_yofn3")
+
+[node name="mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 mesh = SubResource("BoxMesh_yofn3")
-script = ExtResource("1_yofn3")
 
 [node name="light-detector" parent="." instance=ExtResource("1_8jmvf")]
 

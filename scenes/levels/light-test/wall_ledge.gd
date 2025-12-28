@@ -1,8 +1,10 @@
-extends MeshInstance3D
+extends Node3D
 
 @export var light : Node3D
 
 @onready var light_detector: RayCast3D = $"light-detector"
+@onready var submesh: MeshInstance3D = $mesh
+
 
 func _ready() -> void:
 	light_detector.light = light
@@ -13,9 +15,9 @@ func _ready() -> void:
 
 
 func _on_lightdetector_enter_light() -> void:
-	scale.x *= 10
+	submesh.scale.z *= 10
 	print("enter light")
 
 func _on_lightdetector_exit_light() -> void:
-	scale.x /= 10
+	submesh.scale.z /= 10
 	print("exit light")

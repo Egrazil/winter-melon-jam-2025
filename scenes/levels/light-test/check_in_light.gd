@@ -13,16 +13,16 @@ var wasInLight = false
 
 # called once at beginning
 func _ready() -> void:
-	wasInLight = not is_colliding()
-	exit_light.emit()
+	wasInLight = !is_colliding()
+
 
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print(light)
+	#print(target_position)
 	if (light):
-		target_position = light.position - global_position
+		target_position = light.position - self.global_position
 	else:
 		print("no light")
 	if (!wasInLight && !is_colliding()):
