@@ -8,5 +8,18 @@ func _process(delta: float) -> void:
 		position.x += 1 * delta
 	if(Input.is_action_pressed("ui_down")):
 		position.x -= 1 * delta
-	print($"check-in-light".is_colliding())
+	#print($"check-in-light".is_colliding())
 	#print(check_in_light.target_position)
+
+
+
+
+func _on_checkinlight_enter_light() -> void:
+	print("entered light")
+	
+	
+
+
+
+func _on_checkinlight_exit_light() -> void:
+	print("exited light")

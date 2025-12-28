@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://csdt58rmxecpl"]
+
+[ext_resource type="Script" uid="uid://bniip166ikfqu" path="res://scenes/levels/light-test/check_in_light.gd" id="1_dhjmv"]
+
+[node name="light-detector" type="RayCast3D"]
+visibility_parent = NodePath("..")
+target_position = Vector3(20, 0, 0)
+script = ExtResource("1_dhjmv")
