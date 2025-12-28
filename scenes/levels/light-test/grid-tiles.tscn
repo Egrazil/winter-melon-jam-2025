@@ -1,0 +1,81 @@
+[gd_scene load_steps=3 format=3 uid="uid://cva77agshne70"]
+
+[ext_resource type="Script" uid="uid://b13vynxpat7h0" path="res://scenes/levels/light-test/grid_tiles.gd" id="1_avwng"]
+[ext_resource type="PackedScene" uid="uid://b2mbiloi8dv13" path="res://scenes/levels/light-test/wall-ledge.tscn" id="1_fyccn"]
+
+[node name="GridTiles" type="MeshInstance3D"]
+script = ExtResource("1_avwng")
+
+[node name="wall-ledge" parent="." instance=ExtResource("1_fyccn")]
+
+[node name="wall-ledge2" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
+
+[node name="wall-ledge3" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2)
+
+[node name="wall-ledge4" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.3)
+
+[node name="wall-ledge5" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.4)
+
+[node name="wall-ledge6" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+
+[node name="wall-ledge7" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0.1)
+
+[node name="wall-ledge8" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0.2)
+
+[node name="wall-ledge9" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0.3)
+
+[node name="wall-ledge10" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0.4)
+
+[node name="wall-ledge11" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
+[node name="wall-ledge12" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.1)
+
+[node name="wall-ledge13" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.2)
+
+[node name="wall-ledge14" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.3)
+
+[node name="wall-ledge15" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.4)
+
+[node name="wall-ledge16" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+
+[node name="wall-ledge17" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0.1)
+
+[node name="wall-ledge18" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0.2)
+
+[node name="wall-ledge19" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0.3)
+
+[node name="wall-ledge20" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0.4)
+
+[node name="wall-ledge21" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+
+[node name="wall-ledge22" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0.1)
+
+[node name="wall-ledge23" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0.2)
+
+[node name="wall-ledge24" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0.3)
+
+[node name="wall-ledge25" parent="." instance=ExtResource("1_fyccn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0.4)

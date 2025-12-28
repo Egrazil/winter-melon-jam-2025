@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dt5rh2rtck2p5"]
 
 [ext_resource type="Script" uid="uid://ggd66n878cts" path="res://scenes/levels/light-test/light-mover.gd" id="1_4ta34"]
-[ext_resource type="PackedScene" uid="uid://b2mbiloi8dv13" path="res://scenes/levels/light-test/wall-ledge.tscn" id="4_474it"]
+[ext_resource type="PackedScene" uid="uid://cva77agshne70" path="res://scenes/levels/light-test/grid-tiles.tscn" id="3_4ta34"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ui0td"]
 
@@ -23,7 +23,7 @@ visible = false
 size = Vector3(4.064453, 1, 0.28112793)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.038255725, 0.24265005, -0.96935934, 0.009568725, 0.97011393, 0.2424613, 0.99922216, 9.320453e-10, -0.03943426, -7.3945193, 1.2319869, -2.190273)
+transform = Transform3D(-0.038255725, 0.24265005, -0.96935934, 0.009568725, 0.97011393, 0.2424613, 0.99922216, 9.320476e-10, -0.03943426, -8.075264, 1.2319869, -2.190273)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.7500738)
@@ -34,9 +34,6 @@ shape = SubResource("BoxShape3D_ui0td")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 mesh = SubResource("BoxMesh_4ta34")
 
-[node name="wall-tile" parent="." node_paths=PackedStringArray("light") instance=ExtResource("4_474it")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.4614577)
+[node name="GridTiles" parent="." node_paths=PackedStringArray("light") instance=ExtResource("3_4ta34")]
+transform = Transform3D(-0.9996152, 0, -0.027729588, 0, 1, 0, 0.027729588, 0, -0.9996152, -1.2569157, 0, -4.134855)
 light = NodePath("../OmniLight3D")
-
-[node name="RayCast3D" type="RayCast3D" parent="wall-tile"]
-target_position = Vector3(0, -0.138, 5.9)

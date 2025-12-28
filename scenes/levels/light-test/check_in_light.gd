@@ -23,8 +23,6 @@ func _process(delta: float) -> void:
 	#print(target_position)
 	if (light):
 		target_position = light.position - self.global_position
-	else:
-		print("no light")
 	if (!wasInLight && !is_colliding()):
 		wasInLight = true
 		enter_light.emit()
