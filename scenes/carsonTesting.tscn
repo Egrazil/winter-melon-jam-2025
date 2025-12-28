@@ -1,0 +1,85 @@
+[gd_scene load_steps=9 format=3 uid="uid://j5bb3pmv658i"]
+
+[ext_resource type="Texture2D" uid="uid://bljao4mmxqyhh" path="res://assets/icon.svg" id="2_fhq0b"]
+[ext_resource type="Script" uid="uid://c2hk6lmhkiu1k" path="res://MovingDecal.gd" id="2_gbpm4"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fhq0b"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_gbpm4"]
+sky_material = SubResource("ProceduralSkyMaterial_fhq0b")
+
+[sub_resource type="Environment" id="Environment_i2n0n"]
+background_mode = 2
+sky = SubResource("Sky_gbpm4")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_fhq0b"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fhq0b"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fhq0b"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_i2n0n")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.6211478, -0.32872185, 0.7114193, 0, 0.9077775, 0.4194521, -0.78369343, -0.26054177, 0.563864, 1.3535075, 2.173718, 2.541296)
+fov = 90.0
+
+[node name="Node3D" type="Node3D" parent="."]
+script = ExtResource("2_gbpm4")
+
+[node name="Decal" type="Decal" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9921534, 0, 0)
+texture_albedo = ExtResource("2_fhq0b")
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 100, 0, 0, 0, 1, -1.757, 1.105, 0)
+shape = SubResource("SphereShape3D_fhq0b")
+target_position = Vector3(0, -2.295, 0)
+max_results = 8
+collide_with_areas = true
+
+[node name="Boxes" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Boxes"]
+transform = Transform3D(16.483213, 0, 0, 0, 1, 0, 0, 0, 14.751089, 0, 0, 0)
+mesh = SubResource("BoxMesh_fhq0b")
+
+[node name="Area3D" type="StaticBody3D" parent="Boxes/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boxes/MeshInstance3D/Area3D"]
+shape = SubResource("BoxShape3D_fhq0b")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Boxes"]
+transform = Transform3D(7.0256734, 0, -0.6100534, 0, 5.9104147, 0, 3.7032459, 0, 1.002931, 2.4403782, 2.7780862, -5.513441)
+mesh = SubResource("BoxMesh_fhq0b")
+skeleton = NodePath("../MeshInstance3D3")
+
+[node name="Area3D" type="StaticBody3D" parent="Boxes/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boxes/MeshInstance3D2/Area3D"]
+shape = SubResource("BoxShape3D_fhq0b")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Boxes"]
+transform = Transform3D(-4.429382, 0, 0, 0, 5.816172, -3.6046794e-07, 0, 5.084659e-07, 4.1232724, -5.7073402, 1.2571354, -0.3684163)
+mesh = SubResource("BoxMesh_fhq0b")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="Area3D" type="StaticBody3D" parent="Boxes/MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boxes/MeshInstance3D3/Area3D"]
+shape = SubResource("BoxShape3D_fhq0b")
+
+[node name="Decal" type="Decal" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0968072, 0, 0)
+texture_albedo = ExtResource("2_fhq0b")

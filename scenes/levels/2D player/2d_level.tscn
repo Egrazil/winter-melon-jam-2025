@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccyfkkjewjdi2"]
+
+[ext_resource type="PackedScene" uid="uid://dbslmysi0v4qu" path="res://scenes/levels/2D player/2d_controller.tscn" id="1_7t1au"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sfc20"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_ywo1x"]
+sky_material = SubResource("ProceduralSkyMaterial_sfc20")
+
+[sub_resource type="Environment" id="Environment_7voda"]
+background_mode = 2
+sky = SubResource("Sky_ywo1x")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="2dLevel" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7voda")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Ground" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049999833, -0.1, 0)
+use_collision = true
+size = Vector3(9.5, 1, 1)
+
+[node name="Level Geometry" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="First Box" type="CSGBox3D" parent="Level Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90000004, 0.90000004, 0)
+
+[node name="Second Box" type="CSGBox3D" parent="Level Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.2, 0)
+size = Vector3(1, 1.6, 1)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3, 4.9)
+
+[node name="2dController" parent="." instance=ExtResource("1_7t1au")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.2000003, 0.4, 0)
