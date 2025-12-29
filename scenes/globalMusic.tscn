@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbalvyc8keavs"]
+
+[ext_resource type="AudioStream" uid="uid://b5rj6y7jji7dn" path="res://assets/audio/Drifting_Away.mp3" id="1_cij0n"]
+[ext_resource type="Script" uid="uid://dx6gepbk0bs22" path="res://scenes/global_music.gd" id="1_wdtyd"]
+
+[node name="GlobalMusic" type="AudioStreamPlayer"]
+stream = ExtResource("1_cij0n")
+volume_db = -11.56
+script = ExtResource("1_wdtyd")

@@ -44,16 +44,11 @@ text = "Quit"
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Gameplay instructions: Get the red bean to the other pillar by blocking the light source
+text = "
+Gameplay instructions: Get the red bean to the other pillar by blocking the light source
 ----- Keys -----
 Q: Swap between beans
-R: go to main menu
-
-Credits:
-Carlton Fade
-Egrazil
-MarsChrom
-The World, Again"
+R: go to main menu"
 horizontal_alignment = 1
 vertical_alignment = 1
 

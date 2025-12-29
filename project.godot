@@ -15,6 +15,10 @@ run/main_scene="uid://dx3dsb32cn5a1"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://assets/icon.svg"
 
+[autoload]
+
+GlobalMusic="*res://scenes/globalMusic.tscn"
+
 [filesystem]
 
 import/blender/enabled=false

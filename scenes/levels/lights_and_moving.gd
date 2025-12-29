@@ -7,10 +7,10 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
-func _unhandled_key_input(event: InputEvent) -> void:
+func _unhandled_key_input(_event: InputEvent) -> void:
 	if Input.is_physical_key_pressed(KEY_R):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		get_tree().change_scene_to_file("res://scenes/Main Menu/main menu.tscn")
@@ -19,6 +19,6 @@ func _unhandled_key_input(event: InputEvent) -> void:
 
 
 
-func _on_win_area_body_entered(body: Node3D) -> void:
+func _on_win_area_body_entered(_body: Node3D) -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	get_tree().change_scene_to_file("res://scenes/win scene/win_scene.tscn")
