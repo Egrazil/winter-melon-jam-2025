@@ -20,9 +20,9 @@ extends CharacterBody3D
 ## Look around rotation speed.
 @export var look_speed : float = 0.002
 ## Normal speed.
-@export var base_speed : float = 7.0
+@export var base_speed : float = 5
 ## Speed of jump.
-@export var jump_velocity : float = 4.5
+@export var jump_velocity : float = 6
 ## How fast do we run?
 @export var sprint_speed : float = 10.0
 ## How fast do we freefly?
@@ -85,7 +85,7 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.z, 0, move_speed)
 	else:
 		velocity.x = 0
-
+	velocity.z = 0
 	# Use velocity to actually move
 	move_and_slide()
 

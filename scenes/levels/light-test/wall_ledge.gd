@@ -21,8 +21,11 @@ func set_light(newLight: Node3D):
 
 func _on_lightdetector_enter_light() -> void:
 	submesh.scale.x = 0.1
+	$StaticBody3D/CollisionShape3D.scale.x = 0.1
+
 	print("enter light")
 
 func _on_lightdetector_exit_light() -> void:
-	submesh.scale.x = 0.5
+	submesh.scale.x = 1
+	$StaticBody3D/CollisionShape3D.scale.x = 1
 	print("exit light")
