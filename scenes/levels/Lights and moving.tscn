@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cl15rg486fqd3"]
+[gd_scene load_steps=8 format=3 uid="uid://ldiha1h1tssc"]
 
 [ext_resource type="PackedScene" uid="uid://cva77agshne70" path="res://scenes/levels/light-test/grid-tiles.tscn" id="1_bnwq5"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="2_vkib5"]
@@ -26,18 +26,19 @@ glow_enabled = true
 environment = SubResource("Environment_u4dwk")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 2.480198, 1.2688837, -0.0013977289)
 shadow_enabled = true
 
 [node name="ground" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2574588, -0.6441587, -2.165924)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.210309, -0.6441587, 1.0264435)
 use_collision = true
-size = Vector3(9.688721, 0.16125488, 9.79303)
+size = Vector3(9.436584, 0.16125488, 16.177765)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8999999, -0.038806796, 0.6677621)
-light_energy = 2.649
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8999999, 0.31606573, 0.6677621)
+light_color = Color(0.79741263, 0.32489184, 0.2645373, 1)
 light_indirect_energy = 0.0
+shadow_enabled = true
 omni_range = 46.476
 
 [node name="GridTiles" parent="." node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
