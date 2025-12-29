@@ -45,7 +45,8 @@ text = "Quit"
 [node name="Label2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 text = "
-Gameplay instructions: Get the red bean to the other pillar by blocking the light source
+Gameplay instructions: Get the red bean to the other pillar by blocking the light source with the box
+Wherever shadow falls on the wall, there becomes a platform
 ----- Keys -----
 Q: Swap between beans
 R: go to main menu"
