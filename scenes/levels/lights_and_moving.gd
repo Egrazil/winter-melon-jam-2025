@@ -14,3 +14,10 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	if Input.is_physical_key_pressed(KEY_R):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		get_tree().change_scene_to_file("res://scenes/Main Menu/main menu.tscn")
+		
+		
+
+
+
+func _on_win_area_body_entered(body: Node3D) -> void:
+	get_tree().change_scene_to_file("res://scenes/win scene/win_scene.tscn")

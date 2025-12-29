@@ -1,9 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://cl15rg486fqd3"]
+[gd_scene load_steps=14 format=3 uid="uid://ldiha1h1tssc"]
 
+[ext_resource type="PackedScene" uid="uid://bo2axw30bc72s" path="res://assets/blends/gem.glb" id="1_503in"]
 [ext_resource type="PackedScene" uid="uid://bm4dqoans1k0p" path="res://scenes/levels/light-test/grid-tiles.tscn" id="1_bnwq5"]
+[ext_resource type="Script" uid="uid://dgrjcwjl76y0w" path="res://scenes/levels/lights_and_moving.gd" id="1_nisc7"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="2_vkib5"]
-[ext_resource type="PackedScene" uid="uid://dbslmysi0v4qu" path="res://scenes/player/2d_controller.tscn" id="3_vkib5"]
-[ext_resource type="PackedScene" uid="uid://8sgwmxpmads2" path="res://scenes/player/playerSwapper.tscn" id="4_u4dwk"]
+[ext_resource type="PackedScene" path="res://scenes/player/2d_controller.tscn" id="3_vkib5"]
+[ext_resource type="Script" uid="uid://dn5qh6oaw0uyf" path="res://scenes/levels/win_area.gd" id="4_2hakw"]
+[ext_resource type="PackedScene" path="res://scenes/player/playerSwapper.tscn" id="4_u4dwk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bnwq5"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -25,6 +28,7 @@ glow_enabled = true
 [sub_resource type="BoxShape3D" id="BoxShape3D_vkib5"]
 
 [node name="LightsAndMoving" type="Node3D"]
+script = ExtResource("1_nisc7")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_u4dwk")
@@ -49,6 +53,9 @@ light_color = Color(0.79741263, 0.32489184, 0.2645373, 1)
 light_indirect_energy = 0.0
 shadow_enabled = true
 omni_range = 4096.0
+
+[node name="gem" parent="OmniLight3D" instance=ExtResource("1_503in")]
+transform = Transform3D(0.21428496, 0, 0, 0, 0.21428496, 0, 0, 0, 0.21428496, -0.007365465, -0.29773003, 0.27660704)
 
 [node name="ProtoController" parent="." instance=ExtResource("2_vkib5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, -0.5, 1.5)
@@ -293,6 +300,8 @@ height = 5.6000004
 
 [node name="win area" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 3.1, -4.1)
+collision_mask = 4
+script = ExtResource("4_2hakw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="win area"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.19999981)
@@ -310,3 +319,5 @@ flatCam = NodePath("../Camera3D")
 
 [node name="Camera3D" type="Camera3D" parent="2d player stuff"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 2.5, -0.39999998)
+
+[connection signal="body_entered" from="win area" to="." method="_on_win_area_body_entered"]
