@@ -1,6 +1,6 @@
 extends Node
 
-var threeD = false
+var threeD = true
 
 
 @export var threePlayer : CharacterBody3D
@@ -8,6 +8,9 @@ var threeD = false
 @export var flatCam : Camera3D
 
 @onready var startingPosition : Vector3 = twoPlayer.position
+
+func _ready() -> void:
+	twoPlayer.visible = false
 
 func _unhandled_key_input(_event: InputEvent) -> void:
 	if Input.is_key_pressed(KEY_Q):

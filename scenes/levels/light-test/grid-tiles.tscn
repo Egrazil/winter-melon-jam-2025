@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cva77agshne70"]
+[gd_scene load_steps=3 format=3 uid="uid://bm4dqoans1k0p"]
 
-[ext_resource type="Script" uid="uid://b13vynxpat7h0" path="res://scenes/levels/light-test/grid_tiles.gd" id="1_avwng"]
+[ext_resource type="Script" path="res://scenes/levels/light-test/grid_tiles.gd" id="1_avwng"]
 [ext_resource type="PackedScene" uid="uid://b2mbiloi8dv13" path="res://scenes/levels/light-test/wall-ledge.tscn" id="1_fyccn"]
 
 [node name="GridTiles" type="MeshInstance3D"]

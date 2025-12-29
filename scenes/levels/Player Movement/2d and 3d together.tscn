@@ -30,7 +30,6 @@ shadow_enabled = true
 
 [node name="2dController" parent="." instance=ExtResource("2_ma1sh")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, -8.3)
-visible = false
 
 [node name="Floor" type="CSGBox3D" parent="."]
 transform = Transform3D(9.900001, 0, 0, 0, 0.099999964, 0, 0, 0, 1, -6.535, 0, -5.3999996)
