@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://8sgwmxpmads2"]
+
+[ext_resource type="Script" uid="uid://bnhxifita2elk" path="res://scenes/player/player_swapper.gd" id="1_n1y1y"]
+
+[node name="PlayerSwapper" type="Node"]
+script = ExtResource("1_n1y1y")

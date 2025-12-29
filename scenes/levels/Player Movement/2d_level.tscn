@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ccyfkkjewjdi2"]
 
-[ext_resource type="PackedScene" uid="uid://dbslmysi0v4qu" path="res://scenes/levels/Player Movement/2d_controller.tscn" id="1_7t1au"]
+[ext_resource type="PackedScene" uid="uid://dbslmysi0v4qu" path="res://scenes/player/2d_controller.tscn" id="1_7t1au"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sfc20"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -43,4 +43,4 @@ size = Vector3(1, 1.6, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3, 4.9)
 
 [node name="2dController" parent="." instance=ExtResource("1_7t1au")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.2000003, 0.4, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.2000003, 0.5, 0)

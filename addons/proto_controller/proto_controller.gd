@@ -102,7 +102,7 @@ func _physics_process(delta: float) -> void:
 		move_speed = base_speed
 
 	# Apply desired movement to velocity
-	if can_move:
+	if can_move and visible:
 		var input_dir := Input.get_vector(input_left, input_right, input_forward, input_back)
 		var move_dir := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if move_dir:
@@ -180,7 +180,7 @@ func check_input_mappings():
 		push_error("Freefly disabled. No InputAction found for input_freefly: " + input_freefly)
 		can_freefly = false
 
-# code is taken from https://gist.github.com/majikayogames/cf013c3091e9a313e322889332eca109
+# code is taken from https://gist.github.com/majikayogames/cf013c3091e9a313e322889332eca109https://gist.github.com/majikayogames/cf013c3091e9a313e322889332eca109
 func _push_away_rigid_bodies():
 	for i in get_slide_collision_count():
 		var c := get_slide_collision(i)
