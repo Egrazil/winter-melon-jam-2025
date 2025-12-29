@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dt5rh2rtck2p5"]
 
 [ext_resource type="Script" uid="uid://ggd66n878cts" path="res://scenes/levels/light-test/light-mover.gd" id="1_4ta34"]
-[ext_resource type="PackedScene" uid="uid://cva77agshne70" path="res://scenes/levels/light-test/grid-tiles.tscn" id="3_4ta34"]
+[ext_resource type="PackedScene" path="res://scenes/levels/light-test/grid-tiles.tscn" id="3_4ta34"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ui0td"]
 
@@ -15,6 +15,8 @@ size = Vector3(9.688721, 0.16125488, 9.79303)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8999999, -0.038806796, -0.13223791)
+light_energy = 16.0
+light_indirect_energy = 7.06
 script = ExtResource("1_4ta34")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]

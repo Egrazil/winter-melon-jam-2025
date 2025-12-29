@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://b181brnspgtsy"]
+[gd_scene load_steps=7 format=3 uid="uid://b181brnspgtsy"]
 
-[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_bh8e8"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_grfyd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bh8e8"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -15,7 +15,11 @@ sky = SubResource("Sky_ra7df")
 tonemap_mode = 2
 glow_enabled = true
 
-[node name="Test" type="Node3D"]
+[sub_resource type="BoxMesh" id="BoxMesh_grfyd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tlh1f"]
+
+[node name="movement test" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_226fi")
@@ -40,4 +44,15 @@ size = Vector3(1, 0.3, 1)
 transform = Transform3D(1.6, 0, 0, 0, 3.1200001, 0, 0, 0, 1, -8.2, 0.56399995, -3.2)
 size = Vector3(1, 0.4, 1)
 
-[node name="ProtoController" parent="." instance=ExtResource("1_bh8e8")]
+[node name="Moveable box" type="RigidBody3D" parent="Scene Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 5.2, -5.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Scene Geometry/Moveable box"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.6999998)
+mesh = SubResource("BoxMesh_grfyd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene Geometry/Moveable box"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0000005, 0.6999998)
+shape = SubResource("BoxShape3D_tlh1f")
+
+[node name="ProtoController" parent="." instance=ExtResource("1_grfyd")]
