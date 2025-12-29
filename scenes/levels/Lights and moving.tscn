@@ -44,25 +44,25 @@ use_collision = true
 size = Vector3(9.436584, 0.16125488, 10.562027)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8999999, 1.1341989, 5.3713136)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8999999, 0.73419875, 5.3713136)
 light_color = Color(0.79741263, 0.32489184, 0.2645373, 1)
 light_indirect_energy = 0.0
 shadow_enabled = true
-omni_range = 46.476
+omni_range = 4096.0
 
 [node name="ProtoController" parent="." instance=ExtResource("2_vkib5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, -0.5, 1.5)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1000001, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1000004, 1, 4.1)
 mass = 75.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.19544578, 0)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.19544578, 0)
 shape = SubResource("BoxShape3D_bnwq5")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.20000005, 0)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.20000005, 0)
 mesh = SubResource("BoxMesh_vkib5")
 
 [node name="walls" type="Node" parent="."]
