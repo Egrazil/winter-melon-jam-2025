@@ -15,6 +15,7 @@ height = 1.8
 
 [node name="2dController" type="CharacterBody3D"]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+collision_mask = 3
 script = ExtResource("1_urcsn")
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
