@@ -287,9 +287,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9000006, 0.099999905, -4.4)
 radius = 0.90000004
 height = 5.6000004
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="win area" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 3.1, -4.1)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="win area"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.19999981)
 shape = SubResource("BoxShape3D_vkib5")
