@@ -19,7 +19,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	#print(target_position)
 	if (light):
 		var t_pos = light.global_position - self.global_position
