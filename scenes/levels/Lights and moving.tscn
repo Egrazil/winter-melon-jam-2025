@@ -61,164 +61,216 @@ shape = SubResource("BoxShape3D_bnwq5")
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.20000005, 0)
 mesh = SubResource("BoxMesh_vkib5")
 
-[node name="wall" type="Node" parent="."]
+[node name="walls" type="Node" parent="."]
 
-[node name="GridTiles3" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles3" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, 1.3, 0, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles4" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles4" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, 0.29999995, 0, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles5" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles5" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -0.70000005, 0, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles6" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles6" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -1.7, 0, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles7" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles7" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -2.7, 0, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles8" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles8" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -3.7, 0, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles9" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles9" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -4.7, 0, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles10" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles10" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -5.7, 0, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles11" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles11" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, 1.3, 1, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles12" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles12" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, 0.29999995, 1, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles13" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles13" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -0.70000005, 1, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles14" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles14" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -1.7, 1, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles15" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles15" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -2.7, 1, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles16" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles16" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -3.7, 1, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles17" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles17" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -4.7, 1, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles18" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles18" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -5.7, 1, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles19" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles19" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, 1.3, 2, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles20" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles20" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, 0.29999995, 2, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles21" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles21" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -0.70000005, 2, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles22" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles22" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -1.7, 2, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles23" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles23" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -2.7, 2, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles24" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles24" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -3.7, 2, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles25" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles25" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -4.7, 2, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles26" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles26" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -5.7, 2, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles27" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles27" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, 1.3, 3, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles28" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles28" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, 0.29999995, 3, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles29" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles29" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -0.70000005, 3, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles30" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles30" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -1.7, 3, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles31" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles31" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -2.7, 3, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles32" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles32" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -3.7, 3, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles33" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles33" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -4.7, 3, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
 
-[node name="GridTiles34" parent="wall" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+[node name="GridTiles34" parent="walls" node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
 transform = Transform3D(-3.2584137e-07, 0, -2, 0, 2, 0, 2, 0, -3.2584137e-07, -5.7, 3, -5)
 skeleton = NodePath("")
 light = NodePath("../../OmniLight3D")
+
+[node name="layout" type="Node" parent="."]
+
+[node name="r piller" type="CSGBox3D" parent="layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 1.7, -5.1)
+size = Vector3(0.6, 4.4, 0.6)
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="layout/r piller"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, -1.7, 5.1)
+
+[node name="l piller" type="CSGBox3D" parent="layout/r piller/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9, 1.7, -5.1)
+size = Vector3(0.6, 4.4, 0.6)
+
+[node name="CSGCombiner3D2" type="CSGCombiner3D" parent="layout/r piller"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, -1.7, 5.1)
+
+[node name="cross bar" type="CSGBox3D" parent="layout/r piller/CSGCombiner3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6000004, 4.1000004, -5.1000004)
+size = Vector3(9.6, 0.6, 0.6)
+
+[node name="CSGCombiner3D3" type="CSGCombiner3D" parent="layout/r piller"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, -1.7, 5.1)
+operation = 2
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="layout/r piller/CSGCombiner3D3"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 1.1999999, 3.6, -5.2)
+radius = 0.3
+
+[node name="CSGCombiner3D4" type="CSGCombiner3D" parent="layout/r piller"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, -1.7, 5.1)
+operation = 2
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="layout/r piller/CSGCombiner3D4"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -6.4, 3.6, -5.2)
+radius = 0.3
+
+[node name="CSGCombiner3D5" type="CSGCombiner3D" parent="layout/r piller"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, -1.7, 5.1)
+operation = 2
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="layout/r piller/CSGCombiner3D5"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -7.3, 4.4529614, -5.2)
+radius = 0.3
+
+[node name="CSGCombiner3D6" type="CSGCombiner3D" parent="layout/r piller"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, -1.7, 5.1)
+operation = 2
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="layout/r piller/CSGCombiner3D6"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 2.1999998, 4.4529614, -5.2)
+radius = 0.3
