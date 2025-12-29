@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ldiha1h1tssc"]
+[gd_scene load_steps=9 format=3 uid="uid://ldiha1h1tssc"]
 
 [ext_resource type="PackedScene" uid="uid://cva77agshne70" path="res://scenes/levels/light-test/grid-tiles.tscn" id="1_bnwq5"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="2_vkib5"]
@@ -19,6 +19,8 @@ glow_enabled = true
 [sub_resource type="BoxShape3D" id="BoxShape3D_bnwq5"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_vkib5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vkib5"]
 
 [node name="LightsAndMoving" type="Node3D"]
 
@@ -284,3 +286,10 @@ height = 6.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9000006, 0.099999905, -4.4)
 radius = 0.90000004
 height = 5.6000004
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 3.1, -4.1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.19999981)
+shape = SubResource("BoxShape3D_vkib5")
