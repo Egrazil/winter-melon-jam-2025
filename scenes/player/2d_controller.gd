@@ -76,7 +76,7 @@ func _physics_process(delta: float) -> void:
 		move_speed = base_speed
 
 	# Apply desired movement to velocity
-	if can_move:
+	if can_move and visible:
 		var input_dir := Input.get_vector(input_left, input_right, input_forward, input_back)
 		var move_dir := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if move_dir:
