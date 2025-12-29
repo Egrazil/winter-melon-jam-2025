@@ -1,12 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://ldiha1h1tssc"]
+[gd_scene load_steps=14 format=3 uid="uid://61pg8q23vfm6"]
 
 [ext_resource type="PackedScene" uid="uid://bo2axw30bc72s" path="res://assets/blends/gem.glb" id="1_503in"]
 [ext_resource type="PackedScene" uid="uid://bm4dqoans1k0p" path="res://scenes/levels/light-test/grid-tiles.tscn" id="1_bnwq5"]
 [ext_resource type="Script" uid="uid://dgrjcwjl76y0w" path="res://scenes/levels/lights_and_moving.gd" id="1_nisc7"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="2_vkib5"]
-[ext_resource type="PackedScene" path="res://scenes/player/2d_controller.tscn" id="3_vkib5"]
+[ext_resource type="PackedScene" uid="uid://dbslmysi0v4qu" path="res://scenes/player/2d_controller.tscn" id="3_vkib5"]
 [ext_resource type="Script" uid="uid://dn5qh6oaw0uyf" path="res://scenes/levels/win_area.gd" id="4_2hakw"]
-[ext_resource type="PackedScene" path="res://scenes/player/playerSwapper.tscn" id="4_u4dwk"]
+[ext_resource type="PackedScene" uid="uid://8sgwmxpmads2" path="res://scenes/player/playerSwapper.tscn" id="4_u4dwk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bnwq5"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)

@@ -20,4 +20,5 @@ func _unhandled_key_input(event: InputEvent) -> void:
 
 
 func _on_win_area_body_entered(body: Node3D) -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	get_tree().change_scene_to_file("res://scenes/win scene/win_scene.tscn")

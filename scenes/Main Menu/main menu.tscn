@@ -13,8 +13,10 @@ script = ExtResource("1_pgxg7")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.2
+anchor_right = 0.8
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -22,7 +24,8 @@ alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Projec_t"
+text = "Projec_T
+"
 horizontal_alignment = 1
 
 [node name="Level 1" type="Button" parent="VBoxContainer"]
@@ -38,6 +41,21 @@ text = "Settings
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Quit"
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Gameplay instructions: Get the red bean to the other pillar by blocking the light source
+----- Keys -----
+Q: Swap between beans
+R: go to main menu
+
+Credits:
+Carlton Fade
+Egrazil
+MarsChrom
+The World, Again"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/Level 1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
