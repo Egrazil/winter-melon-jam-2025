@@ -15,9 +15,9 @@ sky = SubResource("Sky_ra7df")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="BoxMesh" id="BoxMesh_grfyd"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_grfyd"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_tlh1f"]
+[sub_resource type="BoxMesh" id="BoxMesh_tlh1f"]
 
 [node name="movement test" type="Node3D"]
 
@@ -33,29 +33,29 @@ transform = Transform3D(9.900001, 0, 0, 0, 0.099999964, 0, 0, 0, 1, -6.535, 0, -
 use_collision = true
 size = Vector3(2.3, 1, 16.4)
 
-[node name="Scene Geometry" type="CSGCombiner3D" parent="."]
+[node name="Scene Objects" type="Node" parent="."]
+
+[node name="Scene Geometry" type="CSGCombiner3D" parent="Scene Objects"]
 use_collision = true
 collision_layer = 2
 
-[node name="Big Box" type="CSGBox3D" parent="Scene Geometry"]
+[node name="Big Box" type="CSGBox3D" parent="Scene Objects/Scene Geometry"]
 transform = Transform3D(2.5600002, 0, 0, 0, 5.8406405, 0, 0, 0, 1, -6.42, 0.95609665, -5.2)
 size = Vector3(1, 0.3, 1)
 
-[node name="Small Box" type="CSGBox3D" parent="Scene Geometry"]
+[node name="Small Box" type="CSGBox3D" parent="Scene Objects/Scene Geometry"]
 transform = Transform3D(1.6, 0, 0, 0, 3.1200001, 0, 0, 0, 1, -8.2, 0.56399995, -3.2)
 size = Vector3(1, 0.4, 1)
 
-[node name="Moveable box" type="RigidBody3D" parent="Scene Geometry"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 5.2, -5.9)
-collision_layer = 2
+[node name="Moveable Box" type="RigidBody3D" parent="Scene Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6000001, -1.7)
 collision_mask = 3
+mass = 75.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Scene Geometry/Moveable box"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.6999998)
-mesh = SubResource("BoxMesh_grfyd")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene Objects/Moveable Box"]
+shape = SubResource("BoxShape3D_grfyd")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene Geometry/Moveable box"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0000005, 0.6999998)
-shape = SubResource("BoxShape3D_tlh1f")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Scene Objects/Moveable Box"]
+mesh = SubResource("BoxMesh_tlh1f")
 
 [node name="ProtoController" parent="." instance=ExtResource("1_grfyd")]
