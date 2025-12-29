@@ -1,3 +1,67 @@
-[gd_scene format=3 uid="uid://cl15rg486fqd3"]
+[gd_scene load_steps=8 format=3 uid="uid://cl15rg486fqd3"]
+
+[ext_resource type="PackedScene" uid="uid://cva77agshne70" path="res://scenes/levels/light-test/grid-tiles.tscn" id="1_bnwq5"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="2_vkib5"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bnwq5"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_vkib5"]
+sky_material = SubResource("ProceduralSkyMaterial_bnwq5")
+
+[sub_resource type="Environment" id="Environment_u4dwk"]
+background_mode = 2
+sky = SubResource("Sky_vkib5")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bnwq5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vkib5"]
 
 [node name="LightsAndMoving" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_u4dwk")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="ground" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2574588, -0.6441587, -2.165924)
+use_collision = true
+size = Vector3(9.688721, 0.16125488, 9.79303)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8999999, -0.038806796, 0.6677621)
+light_energy = 2.649
+light_indirect_energy = 0.0
+omni_range = 46.476
+
+[node name="GridTiles" parent="." node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, -3.7009444, 0, -4.134855)
+light = NodePath("../OmniLight3D")
+
+[node name="GridTiles2" parent="." node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, -1.2072797, 0, -4.134855)
+light = NodePath("../OmniLight3D")
+
+[node name="GridTiles3" parent="." node_paths=PackedStringArray("light") instance=ExtResource("1_bnwq5")]
+transform = Transform3D(-5.36422e-07, 0, -5, 0, 5, 0, 5, 0, -5.36422e-07, 1.3000001, 0, -4.1)
+skeleton = NodePath("../GridTiles2")
+light = NodePath("../OmniLight3D")
+
+[node name="ProtoController" parent="." instance=ExtResource("2_vkib5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, -0.5, 1.5)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1000001, 1, 0)
+mass = 75.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_bnwq5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = SubResource("BoxMesh_vkib5")
